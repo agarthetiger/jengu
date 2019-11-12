@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 import groovy.time.TimeCategory
 import groovy.xml.*
+import org.apache.commons.lang.exception.ExceptionUtils
 import org.w3c.dom.*
 
 def call(String testFileGlob = 'tests/*Tests.groovy') {
@@ -47,7 +48,9 @@ private runTests(String testFileGlob) {
             catch (Exception e) {
                 log.debug "Caught Exception thrown by ${testCase}() from ${testFile.path}"
                 log.error "Exception message is ${e.getMessage()}"
-                additionalAttributes = [result: 'error', resultMessage: e.getMessage(), resultStackTrace: e.getStackTrace()]
+                additionalAttributes = [result: 'error',
+                                        resultMessage: e.getMessage(),
+                                        resultStackTrace: ExceptionUtils.getStackTrace(e)]
             }
             finally {
                 def testCaseResult = [classname: testFile.name.tokenize('/.')[0],
