@@ -3,7 +3,7 @@
 
 ---
 
-<p align="center"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/agarthetiger/jengu?sort=semver"></p>
+<p align="center"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/agarthetiger/jengu?sort=semver"> <img alt="GitHub" src="https://img.shields.io/github/license/agarthetiger/jengu"></p>
 
 Jengu is a test framework to test Jenkins Shared Library code. It was born from necessity while working with Jenkins at scale. See the repo [wiki](https://github.com/agarthetiger/jengu/wiki) for the background to why this project exists. 
 
