@@ -11,7 +11,7 @@ Jengu is a test framework to test Jenkins Shared Library code. It was born from 
 
 The purpose of this library is to enable writing automated tests to assert the correct behaviour of Jenkins Shared Libraries. Jengu enables the execution of tests and reporting of the results, it is your job to write good tests for your shared library.
 
-The entry point is the libraryTestRunner() method. This looks by default for files in the workspace using the file glob `tests/*Tests.groovy`. These files will be loaded and any methods annotated with `@Test` from `org.junit.Test` will be executed. The results of the tests will be output into a series of xml files, one xml file per test file, under `output/test-results/` in the workspace. The test results are published using the JUnit plugin (see dependency).
+The entry point is the `libraryTestRunner()` method. This looks by default for files in the workspace using the file glob "`tests/*Tests.groovy`". These files will be loaded and any methods annotated with `@Test` from `org.junit.Test` will be executed. The results of the tests will be output into a series of xml files, one xml file per test file, under `output/test-results/` in the workspace. The test results are published using the JUnit plugin (see dependency).
 
 ## Getting started
 ### Usage
